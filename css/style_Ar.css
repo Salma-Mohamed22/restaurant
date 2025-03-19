@@ -1,0 +1,31 @@
+body {
+    direction: rtl;
+    text-align: right;
+  }
+  aside {
+    left: unset !important;
+    right: 0px !important;
+  }
+  .cart-popup {
+    text-align: right !important;
+  }
+  .black-gradient  {
+    left: unset !important;
+    right: 0px !important;
+  }
+  .image-abs {
+    left: unset !important;
+    right: 0px !important;
+}
+.offers::after {
+    left: unset !important;
+    right: 8px !important;
+  }
+  .offers .icon {
+    right: -8px !important;
+    left: unset !important;
+   }
+   .item-profile-img {
+     right: 10px !important;
+     left: unset !important;
+   }

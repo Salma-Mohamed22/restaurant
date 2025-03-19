@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar ">
+      <div class="d-flex justify-content-between align-items-center w-100" >
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-list main_side_icon icon" ></i>
+          <img srcset="../assets/images/logo.svg" alt="Brand_logo" width="120">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- tabs & location -->
+          <div class="navbar-nav me-auto mb-lg-0">
+              <div class="tabs-wrapper ">
+                  <ul class="navbar-nav tabs">
+                    <li data-tab="Delivery" class="active">Delivery</li>
+                    <li data-tab="Pickup">Pickup</li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                      <img srcset="../assets/images/location_icon.svg" class="icon">  
+                      <span>Kuwait City</span>
+                    </div>
+                    <i class="bi bi-chevron-down"></i>
+                  </a>
+                
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+          </div>
+          <!-- search -->
+        <div class="nav-actions">
+          <form class="search d-flex" role="search">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i> </span>
+              <input type="text" class="form-control" placeholder="Food, drinks or Stores" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+          </form>
+
+          <a class="btn primary-btn"> <img srcset="../assets/images/cart.svg"> <span class="text-light nowrap">Cart • 0</span></a>
+          <a class="btn secondary-btn px-3">Signup</a>
+          <a class="btn secondary-btn px-3">Login</a>
+          <a class="d-flex gap-1 align-items-center lang"><span class="text-black">العربية</span><img srcset="../assets/images/AR.svg"> </a>
+        </div>
+        </div>
+      </div>
+  </nav>
+
+  <!-- Responsive Navbar -->
+  <nav class="navbar  resp-navbar">
+    <div class=" w-100 resp-navbar-content" >
+      <div class="w-100 main-navbar p-0">
+            <div class="d-flex w-100 align-items-center">
+              <a class="navbar-brand" href="#">
+                <img srcset="../assets/images/discover.svg" alt="Brand_logo" >
+              </a>
+                  <!-- search -->
+                    <form class="search w-100" role="search">
+                      <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i> </span>
+                        <input type="text" class="form-control" placeholder="Food, drinks or Stores" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    </form>
+            </div>
+            <a> <img srcset="../assets/images/resp_cart.svg"></a>
+            <a> <img srcset="../assets/images/bell.svg"></a>
+            <i class="bi bi-list main_side_icon icon" ></i>
+      </div>
+      <hr class="w-100">
+      <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+            <div class="navbar-nav justify-content-between w-100">
+              <div class="dropdown">
+                <a class="btn dropdown-toggle gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="d-flex align-items-center">
+                    <img srcset="../assets/images/location_icon.svg" class="icon">  
+                    <span>Kuwait City</span>
+                  </div>
+                  <i class="bi bi-chevron-down"></i>
+                </a>
+              
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <div class="tabs-wrapper w-50">
+                <ul class="navbar-nav tabs">
+                  <li data-tab="Delivery" class="active w-50">Delivery</li>
+                  <li data-tab="Pickup" class="w-50">Pickup</li>
+                </ul>
+              </div>
+        </div>
+    
+      </div>
+    </div>
+</nav>
+
+ <!-- aside -->
+ <aside>
+  <div class="d-flex gap-3 align-items-center">
+    <img class="user-img" srcset="../assets/images/Avatar.svg" alt="user-img">
+    <div class="d-flex flex-column">
+      <h6 class="subtitle">Welcome !</h6>
+      <h6 class="user-name">Hello, John</h6>
+    </div>
+   </div>
+    <ul class="aside-list">
+       <li class="aside-list-item">
+           <img class="icon" srcset="../assets/images/orders_icon.svg">
+           <a href="#">Orders</a>
+       </li>
+       <li class="aside-list-item">
+         <i class="bi bi-heart"></i>
+         <a href="#">Favorites</a>
+       </li>
+       <li class="aside-list-item">
+         <i class="bi bi-geo-alt"></i>
+         <a href="#">Saved Address</a>
+       </li>
+       <li class="aside-list-item">
+         <img class="icon" srcset="../assets/images/promo_icon.svg">
+         <a href="#">Promotions</a>
+       </li>
+       <li class="aside-list-item">
+         <img class="icon" srcset="../assets/images/user_icon.svg">
+         <a href="#">Account Settings</a>
+       </li>
+       <li class="aside-list-item">
+         <i class="bi bi-power"></i>
+         <a href="#">Sign Out</a>
+       </li>
+    </ul>
+
+    <div class="d-flex flex-column gap-3">
+       <a class="sub-aside-item" href="#">About Us</a>
+       <a class="sub-aside-item" href="#">Add your restaurant</a>
+    </div>
+ 
+    <div class="d-flex gap-3 align-items-center mt-2">
+        <img class="aside_img" src="../assets/images/discover.svg">
+        <p class="fs-11 fw-400">Discover the new Eatme app Download Now</p>
+    </div>
+    
+    <div class="d-flex flex-column gap-2">
+       <img class="aside_social_img" srcset="../assets/images/logo_playstore.svg">
+       <img class="aside_social_img" srcset="../assets/images/logo_appstore.svg">
+       <img class="aside_social_img" srcset="../assets/images/logo_huaweistore.svg">
+    </div>
+</aside>  
+<div class="black-gradient"></div>
+
+  <!-- category -->
+  <div class="category-section">
+    <div class="swiper category_swipper">
+      <div class="swiper-button-prev"></div>
+        <div class="swiper-wrapper">      
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/breakfast.svg">
+              <h4>Breakfast</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/burger.svg">
+              <h4>Burger</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/pizza.svg">
+              <h4>Pizza</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/asian.svg">
+              <h4>Asian</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/american.svg">
+              <h4>American</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/healthy.svg">
+              <h4>Healthy</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/coffee.svg">
+              <h4>Coffee</h4>
+            </div>
+          </div>
+           <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/fast_food.svg">
+              <h4>Fast food</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/breakfast.svg">
+              <h4>Breakfast</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="category">
+              <img class="icon" srcset="../assets/images/breakfast.svg">
+              <h4>Breakfast</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+    </div>
+  </div> 
+
+    <!-- offers -->
+    <div class="category-section">
+      <div class="swiper category_swipper">
+        <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper">      
+            <div class="swiper-slide">
+              <div class="offers">
+                <img class="icon" srcset="../assets/images/flash_offer.svg">
+                <h4>Flash Offers</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers">
+                <img class="icon" srcset="../assets/images/free_delivery.svg">
+                <h4>Free Delivery</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers">
+                <img class="icon" srcset="../assets/images/get_one.svg">
+                <h4>Buy one Get one</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers">
+                <img class="icon" srcset="../assets/images/off.svg">
+                <h4>50% off</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers">
+                <img class="icon" srcset="../assets/images/nearYou.svg">
+                <h4>Near You</h4>
+              </div>
+            </div>
+     
+          </div>
+          <div class="swiper-button-next"></div>
+      </div>
+    </div> 
+  
+  <!-- filter -->
+   <div class="filters">
+      <div class="dropdown filter_item">
+        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span>Sort by: <span>Recommended</span></span>
+          <i class="bi bi-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu" onclick="event.stopPropagation()">
+          <div class="filter_dropdown">
+            <div class="dropdown-header">
+              <h3>Sort by</h3>
+              <i class="bi bi-x icon"></i>
+            </div>
+            <div class="radios">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Recommended
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Store Rate
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Order Time
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                  Delivery Fees
+                </label>
+              </div>
+            </div>
+            <div class="buttons justify-content-end">
+              <a class="btn primary-btn">Apply</a>
+              <a class="btn secondary-btn">Reset</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown filter_item">
+        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img srcset="../assets/images/discount.svg" class="icon">
+          <span>Discount Range</span>
+          <i class="bi bi-chevron-down"></i>
+        </a>   
+        <div class="dropdown-menu">
+          <div class="filter_dropdown">
+             <div class="dropdown-header">
+               <div>
+                <h3>Discount Range</h3>
+                <h5 class="subtitle mt-2">Over 25%</h5>
+               </div>
+               <i class="bi bi-x icon"></i>
+             </div>
+             <div class="slider-container">
+              <input type="range" min="0.5" max="3" step="0.5" value="1" id="discount-slider">
+              <div class="slider-labels">
+                <span>0.5</span>
+                <span>1</span>
+                <span>1.5</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+            </div>
+             <div class="buttons justify-content-end">
+               <a class="btn primary-btn">Apply</a>
+               <a class="btn secondary-btn">Reset</a>
+             </div>
+          </div>
+         </div>
+      </div>
+      <div class="dropdown filter_item">
+        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-star-fill"></i>
+          <span>Rate</span>
+          <i class="bi bi-chevron-down"></i>
+        </a>   
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+      <div class="dropdown filter_item">
+        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img srcset="../assets/images/bike.svg" class="icon">
+          <span>Max delivery fees</span>
+          <i class="bi bi-chevron-down"></i>
+        </a>   
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+   </div>
+
+   <div class="content">
+         <!-- advertise swipper -->
+         <div class="swiper advertise_swipper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper">      
+            <div class="swiper-slide">
+              <div class="poster_item" style="background:url(../assets/images/blue_poster.svg)">
+                <div class="poster-text">
+                  <h2 class="main-item-title"> Enjoy 10KD off orders up to 20KD from selected stores </h2>
+                  <p class="small_desc">Use code: OFF10</p>
+                </div>
+                <a class="white-btn status px-2">Shop Now</a>
+                <img class="poster-img" srcset="../assets/images/poster1.svg">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="poster_item" style="background:url(../assets/images/yellow_poster.svg)">
+                <div class="poster-text">
+                  <h2 class="main-item-title text-black">Free Delivery orders 20KD for selected stores  </h2>
+                  <p class="small_desc text-desc">Use code: FREEDELIVERY</p>
+                </div>
+                <a class="white-btn status px-2">Order Now</a>
+                <img class="poster-img" srcset="../assets/images/poster2.svg">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="poster_item" style="background:url(../assets/images/dark_blue_poster.svg)">
+                <div class="poster-text">
+                  <h2 class="main-item-title ">Save 25% or more on Happy hour stores :)</h2>
+                  <p class="small_desc">Every day 5-11 PM</p>
+                </div>
+                <a class="white-btn status px-2">Browse Now</a>
+                <img class="poster-img" srcset="../assets/images/poster3.svg">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="poster_item" style="background:url(../assets/images/blue_poster.svg)">
+                <div class="poster-text">
+                  <h2 class="main-item-title"> Enjoy 10KD off orders up to 20KD from selected stores </h2>
+                  <p class="small_desc">Use code: OFF10</p>
+                </div>
+                <a class="white-btn status px-2">Shop Now</a>
+                <img class="poster-img" srcset="../assets/images/poster1.svg">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="poster_item" style="background:url(../assets/images/yellow_poster.svg)">
+                <div class="d-flex flex-column gap-2 w-50">
+                  <h2 class="main-item-title text-black">Free Delivery orders 20KD for selected stores  </h2>
+                  <p class="small_desc text-desc">Use code: FREEDELIVERY</p>
+                </div>
+                <a class="white-btn status px-2">Order Now</a>
+                <img class="poster-img" srcset="../assets/images/poster2.svg">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+      </div>
+
+        
+           <div class="swiper main_swipper">
+            <div class="d-flex justify-content-between gap-2 flex-wrap mb-32">
+              <h2 class="main-title">Top Pizza Offers</h2>
+              <div class="swipper_buttons">
+                <h3>See all <span class="more_icon"><i class="bi bi-chevron-right"></i></span></h3>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="main-item">
+                    <div class="main-item-img">
+                      <img class="img" srcset="../assets/images/nola-bg.svg" alt="new-picks"> 
+                      <div class="image-abs">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="white-bg status"><img srcset="../assets/images/loading.svg"><span>01:59:30</span></div>
+                            <div class="orange-bg status">70%</div>
+                          </div>
+                           <label class="favourite">
+                            <input type="checkbox">
+                            <i class="bi bi-heart-fill"></i>
+                          </label>
+                        </div>
+                        <div class="black-bg status ms-auto"><img srcset="../assets/images/primary_flash.svg">Flash Offer</div>
+                      </div>
+
+                  </div>
+                   <div class="item-profile main-item-text">
+                    <img class="item-profile-img" srcset="../assets/images/nola.svg">
+                    <h4 class="main-item-title">Nola</h4>
+                    <h5 class="main-item-desc">50% discount on chocolate cake from Nola.</h5>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div class="primary-status status">10KD</div>
+                      <h5 class="old_price">40KD</h5>
+                    </div>
+                    
+                   </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-item">
+                    <div class="main-item-img">
+                      <img class="img" srcset="../assets/images/starbucks-bg.svg" alt="new-picks"> 
+                      <div class="image-abs">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="white-bg status"><img srcset="../assets/images/loading.svg"><span>01:59:30</span></div>
+                            <div class="orange-bg status">70%</div>
+                          </div>
+                           <label class="favourite">
+                            <input type="checkbox">
+                            <i class="bi bi-heart-fill"></i>
+                          </label>
+                        </div>
+                        <div class="black-bg status ms-auto"><img srcset="../assets/images/primary_flash.svg">Flash Offer</div>
+                      </div>
+
+                  </div>
+                   <div class="item-profile main-item-text">
+                    <img class="item-profile-img" srcset="../assets/images/starbucks.svg">
+                    <h4 class="main-item-title">Nola</h4>
+                    <h5 class="main-item-desc">50% discount on chocolate cake from Nola.</h5>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div class="primary-status status">10KD</div>
+                      <h5 class="old_price">40KD</h5>
+                    </div>
+                    
+                   </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-item">
+                    <div class="main-item-img">
+                      <img class="img" srcset="../assets/images/papaJohns-bg.svg" alt="new-picks"> 
+                      <div class="image-abs">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="white-bg status"><img srcset="../assets/images/loading.svg"><span>01:59:30</span></div>
+                            <div class="orange-bg status">70%</div>
+                          </div>
+                           <label class="favourite">
+                            <input type="checkbox">
+                            <i class="bi bi-heart-fill"></i>
+                          </label>
+                        </div>
+                        <div class="black-bg status ms-auto"><img srcset="../assets/images/primary_flash.svg">Flash Offer</div>
+                      </div>
+
+                  </div>
+                   <div class="item-profile main-item-text">
+                    <img class="item-profile-img" srcset="../assets/images/papaJohns.svg">
+                    <h4 class="main-item-title">Nola</h4>
+                    <h5 class="main-item-desc">50% discount on chocolate cake from Nola.</h5>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div class="primary-status status">10KD</div>
+                      <h5 class="old_price">40KD</h5>
+                    </div>
+                    
+                   </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-item">
+                    <div class="main-item-img">
+                      <img class="img" srcset="../assets/images/nola-bg.svg" alt="new-picks"> 
+                      <div class="image-abs">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex align-items-center gap-3">
+                            <div class="white-bg status"><img srcset="../assets/images/loading.svg"><span>01:59:30</span></div>
+                            <div class="orange-bg status">70%</div>
+                          </div>
+                           <label class="favourite">
+                            <input type="checkbox">
+                            <i class="bi bi-heart-fill"></i>
+                          </label>
+                        </div>
+                        <div class="black-bg status ms-auto"><img srcset="../assets/images/primary_flash.svg">Flash Offer</div>
+                      </div>
+
+                  </div>
+                   <div class="item-profile main-item-text">
+                    <img class="item-profile-img" srcset="../assets/images/nola.svg">
+                    <h4 class="main-item-title">Nola</h4>
+                    <h5 class="main-item-desc">50% discount on chocolate cake from Nola.</h5>
+                    <div class="d-flex gap-2 align-items-center">
+                      <div class="primary-status status">10KD</div>
+                      <h5 class="old_price">40KD</h5>
+                    </div>
+                    
+                   </div>
+                </div>
+              </div>
+            </div>
+              
+           </div>
+
+           <!-- store -->
+           <div class="market_items w-100">
+                <div class="main-item" >
+                          <div class="main-item-img">
+                            <img class="img" srcset="../assets/images/pick1.svg" alt="new-picks"> 
+                            <div class="image-abs flex-row">
+                                 <div class="primary-status status">Open Now</div>
+                                 <label class="favourite">
+                                  <input type="checkbox" checked>
+                                  <i class="bi bi-heart-fill"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="main-item-text">
+                            <div class="d-flex align-items-center gap-2">
+                              <h4 class="main-item-title">The Habit Burger Grill</h4>
+                              <div class="d-flex align-items-center gap-1 rate_no"><i class="bi bi-star-fill"></i> <span>4.7</span> </div>
+                          </div>
+                          <h5 class="main-item-desc">Burgers, American</h5>
+                          <div class="main-item-details">
+                              <span class="d-flex align-items-center gap-1">
+                                  <i class="bi bi-clock main-item-desc"></i> 
+                                  <h5 class="main-item-desc">Withthin 33 Min •</h5>
+                              </span>
+                              <span class="d-flex align-items-center gap-1">
+                                <img class="icon" srcset="../assets/images/shipping_icon.svg">
+                                <h5 class="main-item-desc">0.95 KWD</h5>
+                              </span>
+                        </div>
+                      </div>
+                </div>
+                <div class="main-item" >
+                  <div class="main-item-img">
+                    <img class="img" srcset="../assets/images/pick1.svg" alt="new-picks"> 
+                    <div class="image-abs flex-row">
+                         <div class="red-status status">closed Now</div>
+                         <label class="favourite">
+                          <input type="checkbox">
+                          <i class="bi bi-heart-fill"></i>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="main-item-text">
+                        <div class="d-flex align-items-center gap-2">
+                          <h4 class="main-item-title">The Habit Burger Grill</h4>
+                          <div class="d-flex align-items-center gap-1 rate_no"><i class="bi bi-star-fill"></i> <span>4.7</span> </div>
+                      </div>
+                      <h5 class="main-item-desc">Burgers, American</h5>
+                      <div class="main-item-details">
+                          <span class="d-flex align-items-center gap-1">
+                              <i class="bi bi-clock main-item-desc"></i> 
+                              <h5 class="main-item-desc">Withthin 33 Min •</h5>
+                          </span>
+                          <span class="d-flex align-items-center gap-1">
+                            <img class="icon" srcset="../assets/images/shipping_icon.svg">
+                            <h5 class="main-item-desc">0.95 KWD</h5>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-item" >
+                  <div class="main-item-img">
+                    <img class="img" srcset="../assets/images/pick1.svg" alt="new-picks"> 
+                    <div class="image-abs flex-row">
+                         <div class="primary-status status">Open Now</div>
+                         <label class="favourite">
+                          <input type="checkbox">
+                          <i class="bi bi-heart-fill"></i>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="main-item-text">
+                        <div class="d-flex align-items-center gap-2">
+                          <h4 class="main-item-title">The Habit Burger Grill</h4>
+                          <div class="d-flex align-items-center gap-1 rate_no"><i class="bi bi-star-fill"></i> <span>4.7</span> </div>
+                      </div>
+                      <h5 class="main-item-desc">Burgers, American</h5>
+                      <div class="main-item-details">
+                          <span class="d-flex align-items-center gap-1">
+                              <i class="bi bi-clock main-item-desc"></i> 
+                              <h5 class="main-item-desc">Withthin 33 Min •</h5>
+                          </span>
+                          <span class="d-flex align-items-center gap-1">
+                            <img class="icon" srcset="../assets/images/shipping_icon.svg">
+                            <h5 class="main-item-desc">0.95 KWD</h5>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-item" >
+                  <div class="main-item-img">
+                    <img class="img" srcset="../assets/images/pick1.svg" alt="new-picks"> 
+                    <div class="image-abs flex-row">
+                         <div class="red-status status">closed Now</div>
+                         <label class="favourite">
+                          <input type="checkbox">
+                          <i class="bi bi-heart-fill"></i>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="main-item-text">
+                        <div class="d-flex align-items-center gap-2">
+                          <h4 class="main-item-title">The Habit Burger Grill</h4>
+                          <div class="d-flex align-items-center gap-1 rate_no"><i class="bi bi-star-fill"></i> <span>4.7</span> </div>
+                      </div>
+                      <h5 class="main-item-desc">Burgers, American</h5>
+                      <div class="main-item-details">
+                          <span class="d-flex align-items-center gap-1">
+                              <i class="bi bi-clock main-item-desc"></i> 
+                              <h5 class="main-item-desc">Withthin 33 Min •</h5>
+                          </span>
+                          <span class="d-flex align-items-center gap-1">
+                            <img class="icon" srcset="../assets/images/shipping_icon.svg">
+                            <h5 class="main-item-desc">0.95 KWD</h5>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-item" >
+                  <div class="main-item-img">
+                    <img class="img" srcset="../assets/images/pick1.svg" alt="new-picks"> 
+                    <div class="image-abs flex-row">
+                         <div class="primary-status status">Open Now</div>
+                         <label class="favourite">
+                          <input type="checkbox" checked>
+                          <i class="bi bi-heart-fill"></i>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="main-item-text">
+                        <div class="d-flex align-items-center gap-2">
+                          <h4 class="main-item-title">The Habit Burger Grill</h4>
+                          <div class="d-flex align-items-center gap-1 rate_no"><i class="bi bi-star-fill"></i> <span>4.7</span> </div>
+                      </div>
+                      <h5 class="main-item-desc">Burgers, American</h5>
+                      <div class="main-item-details">
+                          <span class="d-flex align-items-center gap-1">
+                              <i class="bi bi-clock main-item-desc"></i> 
+                              <h5 class="main-item-desc">Withthin 33 Min •</h5>
+                          </span>
+                          <span class="d-flex align-items-center gap-1">
+                            <img class="icon" srcset="../assets/images/shipping_icon.svg">
+                            <h5 class="main-item-desc">0.95 KWD</h5>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+           </div>
+   </div>
+
+   <footer>
+    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">About us</a>
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">FAQ</a>
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">Privacy Policy</a>
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">Terms and Conditions</a>
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">Contact Us</a>
+        <a href="#"class="footer-item col-sm-3 col-md nowrap">العربية</a>
+    </div>
+    <hr>
+    <div class="d-flex align-items-stretch justify-content-between gap-3 flex-wrap col-12">
+       <div class="footer-imgs col-sm-12 col-md">
+           <img class="footer-logo" srcset="../assets/images/footer-logo.svg" alt="brand-logo">
+           <img class="footer-store" src="../assets/images/logo_playstore.svg" alt="brand-socialmedia">
+           <img class="footer-store" src="../assets/images/logo_playstore.svg" alt="brand-socialmedia">
+           <img class="footer-store" src="../assets/images/logo_huaweistore.svg" alt="brand-socialmedia">
+       </div>
+       <div class="d-flex flex-column justify-content-between col-sm-3 col-md">
+         <div class="d-flex flex-column gap-2">
+           <h1 class="footer-list-title">Restaurants</h1>
+           <ul class="footer-list">
+             <li>Taboon</li>
+             <li>Planet Africa</li>
+             <li>Lan Yuan - Maadi</li>
+             <li>Hadrmout</li>
+             <li>Wild House By Crazy Food</li>
+           </ul>
+         </div>
+         <h1 class="footer-list-more">More Restaurants...</h1>
+       </div>
+      <div class="d-flex flex-column justify-content-between col-sm-3 col-md" >
+         <div class="d-flex flex-column gap-2">
+           <h1 class="footer-list-title">Popular Cuisines</h1>
+           <ul class="footer-list">
+             <li>Italian</li>
+             <li>Mexican</li>
+             <li>Sandwiches</li>
+             <li>Japanese</li>
+             <li>Pizza</li>
+           </ul>
+         </div>
+         <h1 class="footer-list-more">More Cuisines...</h1>
+      </div>
+      <div class="d-flex flex-column justify-content-between col-sm-3 col-md">
+       <div class="d-flex flex-column gap-2">
+         <h1 class="footer-list-title">Popular Areas</h1>
+         <ul class="footer-list">
+           <li>Adailiya</li>
+           <li>Abdulla Al-Salem</li>
+           <li>Bnaid Al-Qar</li>
+           <li>Doha</li>
+           <li>Yarmouk</li>
+         </ul>
+       </div>
+       <h1 class="footer-list-more">More Areas...</h1>
+      </div>
+ 
+    </div>
+    <hr>
+    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+       <p class="footer-reserve">© 2023 Eatme All right reserved</p>
+       <div class="footer-social-media">
+         <a><i class="bi bi-facebook"></i></a>
+         <a><i class="bi bi-twitter"></i></a>
+         <a><i class="bi bi-instagram"></i></a>
+         <a><i class="bi bi-linkedin fs-22"></i></a>
+       </div>
+    </div>
+ </footer>
+
+</body>
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+ <!-- open aside -->
+ <script src="../js/open_aside.js"></script>
+ <!-- open cart -->
+ <script src="../js/open_cart.js"></script>
+ <!-- filters -->
+  <script src="../js/filter.js"></script>vdi
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- toggle bi-chevron -->
+<script>
+  // Select all dropdowns with toggle button
+  let dropdowns = document.querySelectorAll('.dropdown-toggle');
+
+  // Loop through each dropdown and add the event listener
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function () {
+      let icon = this.querySelector('i'); // Find the icon within the clicked dropdown
+      
+      // Check if the dropdown is open by checking the aria-expanded attribute
+      let isOpen = this.getAttribute('aria-expanded') === 'true';
+
+      // Toggle the icon between chevron-down and chevron-up
+      if (isOpen) {
+        icon.classList.remove('bi-chevron-down');
+        icon.classList.add('bi-chevron-up');
+      } else {
+        icon.classList.remove('bi-chevron-up');
+        icon.classList.add('bi-chevron-down');
+      }
+    });
+  });
+</script>
+
+<!-- Initialize Swiper -->
+ <script src="../js/swipper.js"></script>
